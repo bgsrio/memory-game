@@ -96,6 +96,12 @@ ball.classList.add("ball");
 drawBall();
 grid.appendChild(ball);
 
-// movendo a bola
+// movendo a bola, que vai se mexer 2px em cada eixo x e y, diagonalmente. A bola passa direto do grid.
+function moveBall() {
+  ballCurrentPosition[0] += 2;
+  ballCurrentPosition[1] += 2;
+  drawBall();
+}
+timerId = setInterval(moveBall, 15);
 
-//
+//identificando os obstáculos para redirecionar o sentido da bola no grid
